@@ -81,7 +81,7 @@ const PianoRollWrapper: FC = observer(() => {
       if (e.shiftKey && (e.altKey || e.ctrlKey)) {
         // vertical zoom
         let scaleYDelta = isTouchPadEvent(e.nativeEvent)
-          ? 0.02 * e.deltaY
+          ? 0.02 * -e.deltaY
           : 0.01 * e.deltaX
         scaleYDelta = clamp(scaleYDelta, -0.15, 0.15) // prevent acceleration to zoom too fast
         s.scaleAroundPointY(scaleYDelta, e.nativeEvent.offsetY)

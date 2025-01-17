@@ -7,16 +7,16 @@ export const GlobalCSS = () => {
       styles={css`
         html {
           font-size: 16px;
+          height: 100%;
+          margin: 0;
+          padding: 0 !important; /* Remove unnecessary padding added by RemoveScroll in radix-ui/react-dialog */
+          overscroll-behavior: none !important;
         }
 
-        html,
         body {
           height: 100%;
           margin: 0;
           padding: 0 !important; /* Remove unnecessary padding added by RemoveScroll in radix-ui/react-dialog */
-        }
-
-        body {
           -webkit-font-smoothing: subpixel-antialiased;
           color: ${theme.textColor};
           background-color: ${theme.backgroundColor};
